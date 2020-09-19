@@ -12,6 +12,11 @@
     --primary-color: var(--blue);
     --text-color: var(--dark);
 
+    /* fonts */
+    --font-body: -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-size: 15px;
+    --line-height: 18px;
+
     --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 
   }
