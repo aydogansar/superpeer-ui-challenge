@@ -5,21 +5,27 @@
 </template>
 
 <script>
-import MicIcon from "../icons/microphone.svg";
-import CameraIcon from "../icons/camera.svg";
-import OptionsIcon from "../icons/options.svg";
+import {
+  ArrowIcon,
+  CalendarIcon,
+  CameraIcon,
+  ClockIcon,
+  MicIcon,
+  OptionsIcon,
+  UserIcon
+} from "../icons";
+import { icons } from "../icons";
 
-const icons = {
-  mic: "MicIcon",
-  camera: "CameraIcon",
-  options: "OptionsIcon"
-};
 export default {
   name: "IconButton",
   components: {
-    MicIcon,
+    ArrowIcon,
+    CalendarIcon,
     CameraIcon,
-    OptionsIcon
+    ClockIcon,
+    MicIcon,
+    OptionsIcon,
+    UserIcon
   },
   data: function() {
     return {

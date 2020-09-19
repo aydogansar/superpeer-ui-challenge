@@ -5,11 +5,9 @@
   </span>
 </template>
 <script>
-import UserIcon from "../icons/user.svg";
+import { UserIcon } from "../icons";
+import { icons } from "../icons";
 
-const icons = {
-  user: "UserIcon"
-};
 export default {
   name: "TextBox",
   components: {

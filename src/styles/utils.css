@@ -1,0 +1,7 @@
+.text-primary{
+    color:var(--primary-color);
+}
+.small,small {
+    font-size: var(--sm-font-size);
+    line-height: var(--sm-line-height);
+}

@@ -3,22 +3,18 @@
     <CustomText color="primary" size="small">Call with</CustomText>
     <CustomText tag="h3">Niloya Kayıkçı</CustomText>
     <DateDisplay />
-    <TextBox icon="user" v-model="text" />
-    <CustomText>{{ text }}</CustomText>
   </div>
 </template>
 
 <script>
 import CustomText from "./components/CustomText";
 import DateDisplay from "./components/DateDisplay";
-import TextBox from "./components/TextBox";
 
 export default {
   name: "App",
   components: {
     CustomText,
-    DateDisplay,
-    TextBox
+    DateDisplay
   },
   data: function() {
     return {
@@ -30,8 +26,7 @@ export default {
 
 <style>
 #app {
-  width: 384px;
-  height: 795px;
+  max-width: 384px;
   color: var(--text-color);
   margin: 20px auto;
   background: var(--bg-color);
