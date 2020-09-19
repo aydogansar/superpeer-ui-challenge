@@ -9,7 +9,7 @@ export default {
   name: "CustomText",
   data: function() {
     return {
-      classes: `${this.color} ${this.muted ? "muted" : ""}`
+      classes: `${this.color} ${this.size} ${this.muted ? "muted" : ""}`
     };
   },
   props: {
@@ -20,6 +20,10 @@ export default {
     color: {
       type: String,
       default: ""
+    },
+    size: {
+      type: String,
+      default: "medium"
     },
     muted: {
       type: Boolean,
@@ -32,10 +36,15 @@ export default {
 <style scoped>
 .muted {
   color: var(--grey-80);
-  font-size: 13px;
-  line-height: 16px;
+  font-size: var(--sm-font-size);
+  line-height: var(--sm-line-height);
 }
 .primary {
   color: var(--primary-color);
+}
+h3 {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 0 0;
 }
 </style>

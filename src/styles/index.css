@@ -1,6 +1,16 @@
 @import "./normalize.css";
 @import "./variables.css";
 
+*{
+     box-sizing: border-box;
+}
 body{
     background:#f4f7fa;
-  }
+}
+.text-primary{
+  color:var(--primary-color);
+}
+.small {
+  font-size: var(--sm-font-size);
+  line-height: var(--sm-line-height);
+}
