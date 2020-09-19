@@ -1,0 +1,17 @@
+:root{
+    /* colors */
+    --white:#fff;
+    --black:#000;
+    --blue:#3488FA;
+    --dark:#222222;
+    --grey-10:#F4F7FA;
+    --grey-40:#B9C3D5;
+    --grey-80:#818B9D;
+
+    /* theme colors */
+    --primary-color: var(--blue);
+    --text-color: var(--dark);
+
+    --shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+
+  }
