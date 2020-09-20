@@ -1,5 +1,9 @@
 {
   "name": "superpeer-ui",
+  "author": {
+    "name": "Aydoğan Sarı",
+    "email": "aydogansari@hotmail.com"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
