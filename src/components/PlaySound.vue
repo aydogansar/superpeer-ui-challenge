@@ -1,14 +1,15 @@
 <template>
   <Button
+    type="button"
     variant="outline-primary"
-    :class="{ glow: animation }"
-    @click.native="animation = !animation"
+    :class="{ glow: active }"
+    @click.native="active = !active"
   >
-    Play Sound
+    {{ text }}
   </Button>
 </template>
 <script>
-import { Button } from "./Inputs";
+import { Button } from "./FormElements";
 export default {
   name: "PlaySound",
   components: {
@@ -16,8 +17,14 @@ export default {
   },
   data: function() {
     return {
-      animation: false
+      text: "Play Sound",
+      active: false
     };
+  },
+  watch: {
+    active: function() {
+      this.text = this.active ? "Stop Sound" : "Play Sound";
+    }
   }
 };
 </script>
@@ -31,15 +38,13 @@ export default {
   content: "";
   background: linear-gradient(
     45deg,
-    #ff0000,
-    #ff7300,
     #fffb00,
     #48ff00,
     #00ffd5,
     #002bff,
     #7a00ff,
     #ff00c8,
-    #ff0000
+    #fffb00
   );
   position: absolute;
   top: -2px;

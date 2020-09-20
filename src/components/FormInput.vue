@@ -14,8 +14,9 @@
 </template>
 <script>
 import CustomText from "./CustomText";
-import { SelectBox, TextBox, Button } from "./Inputs";
+import { SelectBox, TextBox, Button } from "./FormElements";
 import PlaySound from "./PlaySound";
+
 export default {
   name: "FormInput",
   components: {
