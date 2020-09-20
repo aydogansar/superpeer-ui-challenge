@@ -16,14 +16,6 @@ export default {
   components: {
     ArrowIcon
   },
-  data: function() {
-    return {
-      selectedOption: {
-        type: String,
-        default: this.options[0]
-      }
-    };
-  },
   props: {
     name: {
       type: String
@@ -35,7 +27,6 @@ export default {
   methods: {
     handleChange(e) {
       this.$emit("input", e.target.value);
-      this.selectedOption = e.target.value;
     }
   }
 };

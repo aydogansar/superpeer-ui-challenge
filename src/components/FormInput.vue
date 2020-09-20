@@ -1,6 +1,6 @@
 <template>
   <span class="form-input">
-    <CustomText v-if="title" class="title">{{ title }}</CustomText>
+    <CustomText v-if="title">{{ title }}</CustomText>
     <component
       :is="input"
       :options="options"
@@ -8,6 +8,7 @@
       :variant="variant"
       @input="handleInput"
       @change="handleInput"
+      :class="{ input: title }"
       >{{ text }}</component
     >
   </span>
@@ -60,7 +61,7 @@ export default {
   align-items: center;
   width: 100%;
 }
-.title {
-  width: 145px;
+.input {
+  width: 235px;
 }
 </style>
