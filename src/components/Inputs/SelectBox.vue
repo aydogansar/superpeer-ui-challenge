@@ -1,6 +1,6 @@
 <template>
-  <div class="selectbox">
-    <select :name="name" @input="handleInput" class="border">
+  <div class="selectbox" role="listbox">
+    <select :name="name" @change="handleChange" class="border">
       <option v-for="option in options" :key="option">
         {{ option }}
       </option>
@@ -16,6 +16,14 @@ export default {
   components: {
     ArrowIcon
   },
+  data: function() {
+    return {
+      selectedOption: {
+        type: String,
+        default: this.options[0]
+      }
+    };
+  },
   props: {
     name: {
       type: String
@@ -25,8 +33,9 @@ export default {
     }
   },
   methods: {
-    handleInput(e) {
+    handleChange(e) {
       this.$emit("input", e.target.value);
+      this.selectedOption = e.target.value;
     }
   }
 };

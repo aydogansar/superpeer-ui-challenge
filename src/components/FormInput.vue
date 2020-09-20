@@ -1,9 +1,15 @@
 <template>
   <span class="form-input">
     <CustomText v-if="title" class="title">{{ title }}</CustomText>
-    <component :is="input" :options="options" :icon="icon" :variant="variant">{{
-      text
-    }}</component>
+    <component
+      :is="input"
+      :options="options"
+      :icon="icon"
+      :variant="variant"
+      @input="handleInput"
+      @change="handleInput"
+      >{{ text }}</component
+    >
   </span>
 </template>
 <script>
@@ -35,6 +41,11 @@ export default {
     },
     variant: {
       type: String
+    }
+  },
+  methods: {
+    handleInput(value) {
+      this.$emit("input", value);
     }
   }
 };

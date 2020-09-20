@@ -1,7 +1,7 @@
 <template>
-  <span class="textbox border">
+  <span class="textbox border" role="textbox" tabindex="0" @focus="handleFocus">
     <component :is="component" v-if="icon" />
-    <input type="text" @input="handleInput" />
+    <input type="text" ref="textbox" @input="handleInput" />
   </span>
 </template>
 <script>
@@ -26,6 +26,9 @@ export default {
   methods: {
     handleInput(e) {
       this.$emit("input", e.target.value);
+    },
+    handleFocus() {
+      this.$refs.textbox.focus();
     }
   }
 };
@@ -38,6 +41,9 @@ export default {
   align-items: center;
   justify-content: stretch;
 }
+.textbox:focus-within {
+  box-shadow: var(--focus-shadow);
+}
 svg {
   color: var(--primary-color);
   margin-right: 10px;
@@ -45,6 +51,8 @@ svg {
 .textbox input[type="text"] {
   border: 0;
   width: 100%;
-  outline: 0;
+}
+.textbox input[type="text"]:focus {
+  box-shadow: none;
 }
 </style>

@@ -2,7 +2,7 @@
   <div id="app">
     <CustomText color="primary" size="small">Call with</CustomText>
     <CustomText tag="h3">Niloya Kayıkçı</CustomText>
-    <DateDisplay />
+    <DateDisplay :datetime="now()" />
     <VideoCall />
     <SettingsForm />
   </div>
@@ -24,9 +24,13 @@ export default {
   },
   data: function() {
     return {
-      text: "",
-      options: ["Facetime Hd Camera", "Hands-on Camera", "Webcam"]
+      text: ""
     };
+  },
+  methods: {
+    now: function() {
+      return new Date();
+    }
   }
 };
 </script>

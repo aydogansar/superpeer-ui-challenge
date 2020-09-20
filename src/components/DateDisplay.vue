@@ -1,12 +1,12 @@
 <template>
-  <div class="date-display">
-    <div class="date small border">
+  <div class="date-display mt-3">
+    <div class="date small mb-2 border mr-3 ml-3">
       <span>
-        <CalendarIcon class="text-primary" />
+        <CalendarIcon class="text-primary mr-3" />
         <time datetime="2020-10-07">7 Oct, Weds</time>
       </span>
       <span>
-        <ClockIcon class="text-primary" />
+        <ClockIcon class="text-primary mr-3" />
         <time datetime="10:15+2:00">10:15AM - 10:30AM</time>
       </span>
     </div>
@@ -25,10 +25,15 @@ export default {
     ClockIcon,
     CustomText
   },
-  props: {
-    datetime: {
-      type: String
-    }
+  data: function() {
+    return {
+      date: {
+        type: String
+      },
+      time: {
+        type: String
+      }
+    };
   }
 };
 </script>
@@ -42,16 +47,11 @@ export default {
   display: flex;
   align-items: center;
   padding: 15px 5px;
-  margin-top: 15px;
-  margin-bottom: 8px;
   max-width: 300px;
 }
 .date span {
   display: flex;
   align-items: center;
   margin: 0 10px;
-}
-.date span svg {
-  margin-right: 10px;
 }
 </style>

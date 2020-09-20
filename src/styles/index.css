@@ -4,6 +4,10 @@
 
 *{
      box-sizing: border-box;
+     outline:0;
+}
+*:focus{
+    box-shadow:var(--focus-shadow);
 }
 body{
     background:#f4f7fa;

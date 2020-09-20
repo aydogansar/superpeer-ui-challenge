@@ -1,9 +1,27 @@
 <template>
-  <div class="video-call">
+  <div class="video-call mt-5">
     <div class="controls">
-      <IconButton icon="mic" class="shadow" />
-      <IconButton icon="camera" class="shadow" />
-      <IconButton icon="options" class="shadow" />
+      <IconButton
+        icon="mic"
+        class="shadow"
+        :class="{ active: active.mic }"
+        aria-label="Microphone on/off"
+        @click.native="active.mic = !active.mic"
+      />
+      <IconButton
+        icon="camera"
+        class="shadow"
+        :class="{ active: active.camera }"
+        aria-label="Camera on/off"
+        @click.native="active.camera = !active.camera"
+      />
+      <IconButton
+        icon="options"
+        class="shadow"
+        :class="{ active: active.options }"
+        aria-label="Options"
+        @click.native="active.options = !active.options"
+      />
     </div>
   </div>
 </template>
@@ -14,6 +32,15 @@ export default {
   name: "VideoCall",
   components: {
     IconButton
+  },
+  data: function() {
+    return {
+      active: {
+        mic: false,
+        camera: false,
+        options: false
+      }
+    };
   }
 };
 </script>
@@ -24,7 +51,6 @@ export default {
   background-size: 100%;
   width: 100%;
   height: 190px;
-  margin-top: 20px;
   position: relative;
 }
 .controls {
@@ -33,9 +59,13 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-bottom: 10px;
 }
 .controls button {
-  margin: 0 10px;
+  margin: 0 8px 12px;
+  transition: var(--transition);
+}
+.controls button.active {
+  background: var(--primary-color);
+  color: var(--white);
 }
 </style>
