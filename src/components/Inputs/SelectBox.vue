@@ -50,7 +50,6 @@ select {
   padding-right: 30px;
   width: 100%;
 }
-
 .dropdown-icon {
   position: absolute;
   right: 8px;

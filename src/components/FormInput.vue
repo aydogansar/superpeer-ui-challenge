@@ -15,13 +15,15 @@
 <script>
 import CustomText from "./CustomText";
 import { SelectBox, TextBox, Button } from "./Inputs";
+import PlaySound from "./PlaySound";
 export default {
   name: "FormInput",
   components: {
     CustomText,
     SelectBox,
     TextBox,
-    Button
+    Button,
+    PlaySound
   },
   props: {
     title: {

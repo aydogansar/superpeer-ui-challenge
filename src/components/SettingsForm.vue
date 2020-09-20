@@ -31,11 +31,10 @@
       :options="micOptions"
     />
     <FormInput
-      input="Button"
+      input="PlaySound"
       class="mt-2 mb-2"
       title="Sound Test"
       text="Play Sound"
-      variant="outline-primary"
     />
     <FormInput input="Button" class="mt-5" text="Join Call" />
   </form>
