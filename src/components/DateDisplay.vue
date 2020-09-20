@@ -1,6 +1,6 @@
 <template>
   <div class="date-display">
-    <div class="date small">
+    <div class="date small border">
       <span>
         <CalendarIcon class="text-primary" />
         <time datetime="2020-10-07">7 Oct, Weds</time>
@@ -41,8 +41,6 @@ export default {
 .date {
   display: flex;
   align-items: center;
-  border: var(--border);
-  border-radius: var(--border-radius);
   padding: 15px 5px;
   margin-top: 15px;
   margin-bottom: 8px;

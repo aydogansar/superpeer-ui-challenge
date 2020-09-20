@@ -1,10 +1,19 @@
 @import "./normalize.css";
 @import "./variables.css";
-@import "./utils.css";
+@import "./utilities.css";
 
 *{
      box-sizing: border-box;
 }
 body{
     background:#f4f7fa;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+button{
+    cursor:pointer;
 }

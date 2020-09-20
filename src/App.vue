@@ -3,22 +3,29 @@
     <CustomText color="primary" size="small">Call with</CustomText>
     <CustomText tag="h3">Niloya Kayıkçı</CustomText>
     <DateDisplay />
+    <VideoCall />
+    <SettingsForm />
   </div>
 </template>
 
 <script>
 import CustomText from "./components/CustomText";
 import DateDisplay from "./components/DateDisplay";
+import VideoCall from "./components/VideoCall";
+import SettingsForm from "./components/SettingsForm";
 
 export default {
   name: "App",
   components: {
     CustomText,
-    DateDisplay
+    DateDisplay,
+    VideoCall,
+    SettingsForm
   },
   data: function() {
     return {
-      text: ""
+      text: "",
+      options: ["Facetime Hd Camera", "Hands-on Camera", "Webcam"]
     };
   }
 };

@@ -9,7 +9,9 @@ export default {
   name: "CustomText",
   data: function() {
     return {
-      classes: `${this.color} ${this.size} ${this.muted ? "muted" : ""}`
+      classes: `${this.color ? `text-${this.color}` : ""} ${this.size} ${
+        this.muted ? "muted" : ""
+      }`
     };
   },
   props: {
@@ -18,8 +20,7 @@ export default {
       default: "span"
     },
     color: {
-      type: String,
-      default: ""
+      type: String
     },
     size: {
       type: String,
@@ -34,14 +35,6 @@ export default {
 </script>
 
 <style scoped>
-.muted {
-  color: var(--grey-80);
-  font-size: var(--sm-font-size);
-  line-height: var(--sm-line-height);
-}
-.primary {
-  color: var(--primary-color);
-}
 h3 {
   font-size: 24px;
   line-height: 29px;
