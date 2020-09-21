@@ -24,16 +24,6 @@ export default {
     CalendarIcon,
     ClockIcon,
     CustomText
-  },
-  data: function() {
-    return {
-      date: {
-        type: String
-      },
-      time: {
-        type: String
-      }
-    };
   }
 };
 </script>
